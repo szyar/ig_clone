@@ -4,7 +4,10 @@
       <div class="col-8">
         <div class="card text-center shadow-sm p-3 mt-3">
           <div class="card-header bg-white text-left text-primary font-weight-bold">
-            <h5><%= link_to post.user.username, user_path(post.user) %></h5>
+            <%= image_tag(post.user.profile.url, size: "39",
+                          class: "rounded-circle my-position") if post.user.profile? %>
+            <h5><%= link_to post.user.username, user_path(post.user),
+                    class: "my-position" %></h5>
           </div>
           <div class="card-body">
             <p class="card-text text-left"><%= post.caption %></p>
@@ -16,7 +19,7 @@
               class: "btn btn-outline-danger px-4" %>
             <% end %>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted bg-white">
             <small>Created <%= time_ago_in_words(post.created_at) %> ago,
             edited <%= time_ago_in_words(post.updated_at) %> ago</small>
           </div>
