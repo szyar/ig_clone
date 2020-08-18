@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container ml-5">
   <%= form_with(model: @post, url: posts_path, local: true) do |f| %>
     <div class="row justify-content-md-center">
-      <div class="col-8 mt-3">
+      <div class="col-7 mt-3 mr-5 ">
         <%= render 'shared/errors', obj: @post %>
         <div class="card text-center">
           <div class="card-header bg-grey text-center font-weight-bold my-font-size">
