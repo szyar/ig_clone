@@ -1,1 +1,7 @@
-Hello
+<%= render 'shared/nav' %>
+<%= render 'shared/messages' %>
+
+<h1 class="text-center mt-4"><%= @user.username %>'s profile</h1>
+<div class="text-center m-4"><%= image_tag(@user.profile.url, size: "120") if @user.profile? %></div>
+
+<h3 class="text-center mt-4">Posts</h3>

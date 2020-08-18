@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show]
 
   def page_title
     "Instagram"
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def new
@@ -30,7 +31,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :profile, :profile_cache, :email, :password)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end
