@@ -38,6 +38,16 @@ body {
   background-color: #dcdcdc !important;
 }
 
+.container {
+  height: auto;
+  margin-bottom: 5rem;
+}
+
+.card {
+  height: auto !important;
+  border-radius: 0.5rem !important;
+}
+
 footer {
   width: 100%;
   height: 52px;
