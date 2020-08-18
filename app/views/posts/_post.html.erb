@@ -1,7 +1,7 @@
 <div class="container">
   <% @posts.each do |post| %>
     <div class="row justify-content-md-center">
-      <div class="col-8">
+      <div class="col-7">
         <div class="card text-center shadow-sm p-3 mt-3">
           <div class="card-header bg-white text-left text-primary font-weight-bold">
             <%= image_tag(post.user.profile.url, size: "39",
@@ -9,9 +9,10 @@
             <h5><%= link_to post.user.username, user_path(post.user),
                     class: "my-position" %></h5>
           </div>
-          <div class="card-body">
+          <div class="card-body pl-0">
+            <p class="card-text text-left"><%= image_tag(post.picture.url,
+              size: "600x650") if post.picture? %></p>
             <p class="card-text text-left"><%= post.caption %></p>
-            <p class="card-text text-center"><%= image_tag(post.picture.url, size: "570x300") if post.picture? %></p>
             <%= link_to 'View', post_path(post), class: "btn btn-outline-info px-4" %>
             <% if logged_in? && post.user == current_user %>
               <%= link_to 'Edit', edit_post_path(post), class: "btn btn-outline-primary px-4" %>

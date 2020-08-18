@@ -12,8 +12,9 @@
                           class: "rounded-circle") if @post.user.profile? %>
           </div>
           <div class="card-body">
-            <div class="card-text text-center"><%= @post.caption %></div>
-            <div class="m-4"><%= image_tag(@post.picture.url, size: "570x300") if @post.picture? %></div>
+            <div class="m-4"><%= image_tag(@post.picture.url,
+                 size: "570x300") if @post.picture? %></div>
+            <div class="card-text text-left"><%= @post.caption %></div>
             <% if logged_in? && @post.user == current_user %>
               <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-outline-primary px-4" %>
               <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?" },
