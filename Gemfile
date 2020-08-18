@@ -16,11 +16,11 @@ gem 'jbuilder', '~> 2.5'
 # security
 
 # gem 'redis', '~> 4.0'
-# gem 'bcrypt', '~> 3.1.7'
+#  gem 'bcrypt', '~> 3.1.7'
 
 # for picture upload
-
-# gem 'mini_magick', '~> 4.8'
+  gem 'carrierwave'
+  gem 'mini_magick', '~> 4.8'
 
 # gem 'capistrano-rails', group: :development
 
