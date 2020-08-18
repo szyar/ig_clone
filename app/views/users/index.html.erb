@@ -9,8 +9,14 @@
         <div class="card text-center shadow-sm p-3">
           <div class="card-header bg-white text-center text-primary font-weight-bold">
             <%= link_to user.username, user %>
+            <div class="text-center mt-3">
+              <%= image_tag(user.profile.url, size: "70") if user.profile? %>
+            </div>
           </div>
-          
+
+          <div class="card-body">
+          </div>
+
           <div class="card-footer text-muted bg-white">
             <small>Joined <%= time_ago_in_words(user.created_at) %> ago</small>
           </div>
