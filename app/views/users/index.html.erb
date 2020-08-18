@@ -10,7 +10,7 @@
           <div class="card-header bg-white text-center text-primary font-weight-bold">
             <%= link_to user.username, user %>
             <div class="text-center mt-3">
-              <%= image_tag(user.profile.url, size: "70") if user.profile? %>
+              <%= image_tag(user.profile.url, size: "90", class: "rounded-circle") if user.profile? %>
             </div>
           </div>
 
