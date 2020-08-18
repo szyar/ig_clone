@@ -19,6 +19,10 @@ body {
   background-color: #fafafa;
 }
 
+.my-text-brand {
+  margin-left: 16rem;
+}
+
 .my-input {
   background-color: #fafafa !important;
 }
@@ -50,7 +54,7 @@ body {
 
 .my-position {
   float: left !important;
-  padding: 5px;
+  padding: 7px;
 }
 
 footer {
