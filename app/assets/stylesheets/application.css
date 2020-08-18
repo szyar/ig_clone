@@ -19,6 +19,25 @@
    background-color: #FAFAFA;
  }
 
+ .my-input {
+   background-color: #FAFAFA !important;
+ }
+
+ #upload-photo {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+ }
+
+ .my-badge {
+   background-color: #FAFAFA	 !important;
+ }
+
+ .my-badge:hover {
+   cursor: pointer;
+   background-color: #DCDCDC !important;
+ }
+
  footer {
   width: 100%;
   height: 52px;
