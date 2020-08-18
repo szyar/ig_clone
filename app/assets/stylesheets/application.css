@@ -15,30 +15,30 @@
  *= require_self
  */
 
- body {
-   background-color: #FAFAFA;
- }
+body {
+  background-color: #fafafa;
+}
 
- .my-input {
-   background-color: #FAFAFA !important;
- }
+.my-input {
+  background-color: #fafafa !important;
+}
 
- #upload-photo {
-   opacity: 0;
-   position: absolute;
-   z-index: -1;
- }
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
 
- .my-badge {
-   background-color: #FAFAFA	 !important;
- }
+.my-badge {
+  background-color: #fafafa !important;
+}
 
- .my-badge:hover {
-   cursor: pointer;
-   background-color: #DCDCDC !important;
- }
+.my-badge:hover {
+  cursor: pointer;
+  background-color: #dcdcdc !important;
+}
 
- footer {
+footer {
   width: 100%;
   height: 52px;
   bottom: 0 !important;
@@ -51,5 +51,5 @@
 
 footer p {
   margin-bottom: 0;
-  color: #3b5a98;
+  color: #000;
 }
