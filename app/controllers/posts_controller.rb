@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:show, :index]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def page_title
     "Instagram"
@@ -14,6 +16,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+  end
+
+  def edit
   end
 
   def create
@@ -31,6 +36,22 @@ class PostsController < ApplicationController
     end
   end
 
+  def update
+    if @post.update(post_params)
+      flash[:notice] = "Edited Successfully"
+      redirect_to @post
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    if @post.destroy
+      flash[:notice] = "Deleted Successfully"
+      redirect_to images_path
+    end
+  end
+
   def confirm
     @post = Post.new(post_params)
     @post.user = current_user
@@ -45,6 +66,13 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:caption, :picture, :picture_cache, :user_id)
+  end
+
+  def require_same_user
+    if current_user != @post.user
+      flash[:alert] = "You can only edit or delete your own posts"
+      redirect_to @post
+    end
   end
 
 end
