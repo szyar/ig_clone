@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  mount_uploader :profile, ProfileUploader
+
   before_save { self.email = email.downcase }
   validates :username, presence: true,
                       uniqueness: { case_sensitive: false },

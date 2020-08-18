@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IgClone</title>
+    <title><%=controller.page_title%></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,5 +11,8 @@
 
   <body>
     <%= yield %>
+    <footer class="shadow">
+      <p>Copyright &copy; SOE ZAYAR</p>
+    </footer>
   </body>
 </html>

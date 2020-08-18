@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.5'
 # security
 
 # gem 'redis', '~> 4.0'
-  gem 'bcrypt', '~> 3.1.7'
+  gem 'bcrypt', '~> 3.1.15'
 
 # for picture upload
   gem 'carrierwave'
