@@ -8,13 +8,18 @@
             <h1 class="font-weight-bold m-3"><%= "#{type}" %></h1>
             <p class="text-muted font-weight-bold m-4"><%= "#{text}" %></p>
           </div>
-          <div class="card-body", style="height: 370px;">
+          <div class="card-body", style="height: 450px;">
             <p class="card-text text-center mt-3"><%= f.text_field :username,
             class: "form-control", placeholder: "Username" %></p>
             <p class="card-text text-center mt-4"><%= f.email_field :email,
             class: "form-control", placeholder: "Email address" %></p>
             <p class="card-text text-center"><%= f.password_field :password,
             class: "form-control mt-4", placeholder: "Password" %></p>
+            <p class="card-text text-left text-muted">Upload Profile Picture</p>
+            <p class="card-text text-left">
+              <%= f.file_field :profile %>
+              <%= f.hidden_field :profile_cache %>
+            </p>
             <p class="mt-4">
               <%= f.submit "#{name}",
               class: "btn btn-primary text-white btn-sm btn-block" %>
@@ -24,6 +29,15 @@
             </p>
           </div>
         </div>
+
+        <div class="card text-center mt-3">
+          <div class="card-body">
+            <p class="card-text">
+            Have an account? <%= link_to 'Log In', login_path %>
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   <% end %>

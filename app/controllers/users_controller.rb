@@ -4,6 +4,13 @@ class UsersController < ApplicationController
     "Instagram"
   end
 
+  def index
+    @users = User.all
+  end
+
+  def show
+    
+  end
 
   def new
     @user = User.new
@@ -18,6 +25,12 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :email, :password)
   end
 
 end
