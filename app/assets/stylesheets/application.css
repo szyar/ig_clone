@@ -29,13 +29,12 @@ body {
 
 .my-text-brand {
   margin-left: 16rem;
-  margin-right: 12rem;
   font-family: 'Pacifico', cursive;
   font-size: 1.5rem !important;
   margin-bottom: 0 !important;
 }
 
-.navbar {
+.my-nav {
   margin-top: 0;
   background-color: #ffffff !important;
   height: 3.7rem;
