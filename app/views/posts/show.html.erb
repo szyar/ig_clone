@@ -13,7 +13,7 @@
           </div>
           <div class="card-body pl-0">
             <div class="m-4 text-left"><%= image_tag(@post.picture.url,
-                 size: "600x650") if @post.picture? %></div>
+                 class: "my-image-size") if @post.picture? %></div>
             <div class="card-text text-left pl-4"><%= @post.caption %></div>
             <% if logged_in? && @post.user == current_user %>
               <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-outline-primary px-4" %>

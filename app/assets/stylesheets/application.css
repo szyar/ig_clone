@@ -56,6 +56,10 @@ body {
   font-size: 1.5rem;
 }
 
+.my-image-size {
+  width: 100%;
+}
+
 .my-input {
   background-color: #fafafa !important;
 }

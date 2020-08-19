@@ -11,7 +11,7 @@
           </div>
           <div class="card-body pl-0">
             <p class="card-text text-left"><%= image_tag(post.picture.url,
-              size: "600x650") if post.picture? %></p>
+              class: "my-image-size") if post.picture? %></p>
             <p class="card-text text-left"><%= post.caption %></p>
             <%= link_to 'View', post_path(post), class: "btn btn-outline-info px-4" %>
             <% if logged_in? && post.user == current_user %>
