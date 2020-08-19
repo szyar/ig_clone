@@ -4,12 +4,13 @@
       <div class="col-7 mr-5">
         <div class="card text-center shadow-sm p-3 mt-3">
           <div class="card-header bg-white text-left text-primary font-weight-bold">
-            <%= image_tag(post.user.profile.url, size: "39",
-                          class: "rounded-circle my-position") if post.user.profile? %>
+            <%= link_to image_tag(current_user.profile.url, size: "39",
+                            class: "rounded-circle"), user_path(current_user),
+            class: "nav-link my-position pl-2" %>
             <h5><%= link_to post.user.username, user_path(post.user),
                     class: "my-position my-text" %></h5>
           </div>
-          <div class="card-body pl-0">
+          <div class="card-body">
             <p class="card-text text-left"><%= image_tag(post.picture.url,
               class: "my-image-size") if post.picture? %></p>
             <p class="card-text text-left"><%= post.caption %></p>

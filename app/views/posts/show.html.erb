@@ -8,10 +8,11 @@
         <div class="card text-center mb-5">
           <div class="card-header bg-white text-center text-primary font-weight-bold">
             <h4><%= link_to @post.user.username, user_path(@post.user), class: "my-text" %></h4>
-            <%= image_tag(@post.user.profile.url, size: "120",
-                          class: "rounded-circle") if @post.user.profile? %>
+            <%= link_to image_tag(current_user.profile.url, size: "120",
+                            class: "rounded-circle"), user_path(current_user),
+                            class: "nav-link" %>
           </div>
-          <div class="card-body pl-0">
+          <div class="card-body">
             <div class="m-4 text-left"><%= image_tag(@post.picture.url,
                  class: "my-image-size") if @post.picture? %></div>
             <div class="card-text text-left pl-4"><%= @post.caption %></div>
