@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :favorites, only: [:create, :destroy]
+
+
   root "sessions#new"
 
   get 'signup', to: 'users#new'
