@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   def destroy
     if @post.destroy
       flash[:notice] = "Deleted Successfully"
-      redirect_to images_path
+      redirect_to posts_path
     end
   end
 
