@@ -15,12 +15,40 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
   background-color: #fafafa;
 }
 
 .my-text-brand {
   margin-left: 16rem;
+  font-family: 'Pacifico', cursive;
+
+  font-size: 1.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.navbar {
+  margin-top: 0;
+  background-color: #ffffff !important;
+  height: 3.7rem;
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  margin-left: 0 !important;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.my-text {
+  color: #000 !important;
+  font-size: 1.5rem;
 }
 
 .my-input {
@@ -54,7 +82,7 @@ body {
 
 .my-position {
   float: left !important;
-  padding: 7px;
+  padding: 5px;
 }
 
 footer {

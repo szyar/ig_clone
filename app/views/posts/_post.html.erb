@@ -7,7 +7,7 @@
             <%= image_tag(post.user.profile.url, size: "39",
                           class: "rounded-circle my-position") if post.user.profile? %>
             <h5><%= link_to post.user.username, user_path(post.user),
-                    class: "my-position" %></h5>
+                    class: "my-position my-text" %></h5>
           </div>
           <div class="card-body pl-0">
             <p class="card-text text-left"><%= image_tag(post.picture.url,
