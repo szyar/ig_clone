@@ -17,6 +17,15 @@
                  class: "my-image-size") if @post.picture? %></div>
             <div class="card-text text-left pl-4"><%= @post.caption %></div>
             <% if logged_in? && @post.user == current_user %>
+
+                <% if @favorite.present? %>
+                  <%= link_to'Remove favorite', favorite_path(id: @favorite.id),
+                  method: :delete, class:'btn btn-outline-danger' %>
+                <% else %>
+                  <%= link_to'Favorites', favorites_path(post_id: @post.id),
+                  method: :post, class:'btn btn-outline-primary' %>
+                <% end %>
+
               <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-outline-primary px-4" %>
               <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?" },
               class: "btn btn-outline-danger px-4" %>
