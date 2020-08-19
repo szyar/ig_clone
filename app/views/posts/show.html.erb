@@ -11,10 +11,10 @@
             <%= image_tag(@post.user.profile.url, size: "150",
                           class: "rounded-circle") if @post.user.profile? %>
           </div>
-          <div class="card-body">
-            <div class="m-4"><%= image_tag(@post.picture.url,
-                 size: "570x300") if @post.picture? %></div>
-            <div class="card-text text-left"><%= @post.caption %></div>
+          <div class="card-body pl-0">
+            <div class="m-4 text-left"><%= image_tag(@post.picture.url,
+                 size: "600x650") if @post.picture? %></div>
+            <div class="card-text text-left pl-4"><%= @post.caption %></div>
             <% if logged_in? && @post.user == current_user %>
               <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-outline-primary px-4" %>
               <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?" },
