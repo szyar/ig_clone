@@ -1,12 +1,14 @@
 <nav class="navbar my-nav sticky-top shadow-sm navbar-expand-lg navbar-light bg-light">
-  <%= link_to 'Instagram', posts_path, class: "navbar-brand my-text-brand col-md-4" %>
+  <%= link_to 'Instagram', posts_path,
+      class: "navbar-brand my-text-brand col-md-4" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <div class="navbar-nav">
       <div class="nav-item">
-        <%= link_to 'Inbox', letter_opener_web_path, class: "nav-link pl-3" %>
+        <%= link_to 'Inbox', letter_opener_web_path,
+        class: "px-0 nav-link" %>
       </div>
       <div class="nav-item">
         <%= link_to 'Users', users_path, class: "nav-link pl-3" %>
