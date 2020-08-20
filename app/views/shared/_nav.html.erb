@@ -4,29 +4,29 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="navbar-nav">
-        <div class="nav-item">
-          <%= link_to 'Users', users_path, class: "nav-link pl-3" %>
-        </div>
-        <div class="nav-item">
-          <%= link_to 'Favorites', favorites_path, class: "nav-link pl-3" %>
-        </div>
-        <div class="nav-item">
-          <%= link_to raw('Home'), posts_path, class: "nav-link pl-3" %>
-        </div>
-        <div class="nav-item">
-          <%= link_to 'New Post', new_post_path, class: "nav-link pl-3" %>
-        </div>
-        <div class="nav-item pl-5">
-            <%= link_to image_tag(current_user.profile.url, size: "29",
-                            class: "rounded-circle ml-0"), user_path(current_user),
-            class: "nav-link my-position pl-5" %>
-            <%= link_to "#{current_user.username}", user_path(current_user),
-            class: "nav-link my-position pl-1 pt-2" %>
-        </div>
-        <div class="nav-item">
-          <%= link_to 'LogOut', logout_path, class: "nav-link pl-3", method: :delete %>
-        </div>
+    <div class="navbar-nav">
+      <div class="nav-item">
+        <%= link_to 'Users', users_path, class: "nav-link pl-3" %>
       </div>
+      <div class="nav-item">
+        <%= link_to 'Favorites', favorites_path, class: "nav-link pl-3" %>
+      </div>
+      <div class="nav-item">
+        <%= link_to raw('Home'), posts_path, class: "nav-link pl-3" %>
+      </div>
+      <div class="nav-item">
+        <%= link_to 'New Post', new_post_path, class: "nav-link pl-3" %>
+      </div>
+      <div class="nav-item pl-5">
+          <%= link_to image_tag(current_user.profile.url, size: "29",
+                          class: "rounded-circle ml-0"), user_path(current_user),
+          class: "nav-link my-position pl-5" %>
+          <%= link_to "#{current_user.username}", user_path(current_user),
+          class: "nav-link my-position pl-1 pt-2" %>
+      </div>
+      <div class="nav-item">
+        <%= link_to 'LogOut', logout_path, class: "nav-link pl-3", method: :delete %>
+      </div>
+    </div>
   </div>
 </nav>

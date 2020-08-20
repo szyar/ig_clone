@@ -1,32 +1,32 @@
 <div class="container ml-5">
   <% @posts.each do |post| %>
-      <div class="row justify-content-md-center">
-        <div class="col-7 mr-5">
-          <div class="card text-center shadow-sm p-3 mt-3">
-            <div class="card-header bg-white text-left text-primary font-weight-bold">
-              <%= link_to image_tag(post.user.profile.url, size: "39",
-                              class: "rounded-circle"), user_path(post.user),
-              class: "nav-link my-position pl-2" %>
-              <h5><%= link_to post.user.username, user_path(post.user),
-                      class: "my-position my-text" %></h5>
-            </div>
-            <div class="card-body">
-              <p class="card-text text-left"><%= image_tag(post.picture.url,
-                class: "my-image-size") if post.picture? %></p>
-              <p class="card-text text-left"><%= post.caption %></p>
-              <%= link_to 'View', post_path(post), class: "btn btn-outline-info px-4" %>
-              <% if logged_in? && post.user == current_user %>
-                <%= link_to 'Edit', edit_post_path(post), class: "btn btn-outline-primary px-4" %>
-                <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Are you sure?" },
-                class: "btn btn-outline-danger px-4" %>
-              <% end %>
-            </div>
-            <div class="card-footer text-muted bg-white">
-              <small>Created <%= time_ago_in_words(post.created_at) %> ago,
-              edited <%= time_ago_in_words(post.updated_at) %> ago</small>
-            </div>
+    <div class="row justify-content-md-center">
+      <div class="col-7 mr-5">
+        <div class="card text-center shadow-sm p-3 mt-3">
+          <div class="card-header bg-white text-left text-primary font-weight-bold">
+            <%= link_to image_tag(post.user.profile.url, size: "39",
+                            class: "rounded-circle"), user_path(post.user),
+            class: "nav-link my-position pl-2" %>
+            <h5><%= link_to post.user.username, user_path(post.user),
+                    class: "my-position my-text" %></h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text text-left"><%= image_tag(post.picture.url,
+              class: "my-image-size") if post.picture? %></p>
+            <p class="card-text text-left"><%= post.caption %></p>
+            <%= link_to 'View', post_path(post), class: "btn btn-outline-info px-4" %>
+            <% if logged_in? && post.user == current_user %>
+              <%= link_to 'Edit', edit_post_path(post), class: "btn btn-outline-primary px-4" %>
+              <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Are you sure?" },
+              class: "btn btn-outline-danger px-4" %>
+            <% end %>
+          </div>
+          <div class="card-footer text-muted bg-white">
+            <small>Created <%= time_ago_in_words(post.created_at) %> ago,
+            edited <%= time_ago_in_words(post.updated_at) %> ago</small>
           </div>
         </div>
       </div>
+    </div>
   <% end %>
 </div>
