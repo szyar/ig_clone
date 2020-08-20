@@ -29,6 +29,7 @@ class PostsController < ApplicationController
       render :new
     else
       if @post.save
+        PostMailer.post_confirm_mail(@post.user).deliver
         flash[:notice] = "post Created"
         redirect_to @post
       else
