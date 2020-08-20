@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 50.times do |n|
-  username = Faker::Games::Pokemon.name
+  username = Faker::Name.first_name
   email = Faker::Internet.email
   password = "password"
   User.create!(username: username,
