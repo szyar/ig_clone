@@ -13,6 +13,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+# mail
+gem 'letter_opener_web'
+
 # security
 
 # gem 'redis', '~> 4.0'
@@ -32,7 +35,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'letter_opener_web'
   gem 'faker'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
